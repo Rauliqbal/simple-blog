@@ -1,0 +1,27 @@
+---
+const {pubDate, title, description, href,blogImg} = Astro.props
+
+const formatDate = (date) => {
+	const options = {
+		weekday: "long",
+		year: "numeric",
+		month: "long",
+		day: "numeric"
+	}
+	return new Date(date).toLocaleDateString("id-ID", options)
+}
+---
+<a href={href}>
+	<div class="bg-white rounded-2xl py-6 px-5">
+		<div class="grid grid-cols-3 gap-8">
+			<div class="col-span-2">
+				<span class="uppercase text-sm text-slate-400 font-semibold">{formatDate(pubDate)}</span>
+				<h4 class="mt-8 text-2xl font-semibold">{title}</h4>
+				<p class="text-base md:text-base text-slate-400 leading-relaxed tracking-wide mt-4">{description}</p>
+			</div>
+			<div>
+				<img class="rounded-xl" class="w-2xl" src={blogImg} alt={title}>
+			</div>
+		</div>
+	</div>
+</a>

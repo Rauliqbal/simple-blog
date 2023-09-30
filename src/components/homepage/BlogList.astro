@@ -1,0 +1,20 @@
+---
+import Card from "../Card.astro";
+const posts = await Astro.glob('../../pages/posts/*.md')
+
+---
+
+<section>
+  <div class="container">
+    <div class="flex items-center justify-between">
+      <h2 class="section-title">Daily digest</h2>
+      <a href="/" class="py-2 px-3 bg-white rounded-md font-medium hover:shadow-lg focus:ring focus:ring-white/80 transition duration-300">View all</a>
+    </div>
+
+    <div class="grid gap-8 mt-10">
+      {posts.map((post) => 
+        <Card title={post.frontmatter.title} description={post.frontmatter.description} pubDate={post.frontmatter.pubDate} href={post.url} blogImg={post.frontmatter.image.url}/>
+      )}
+    </div>
+  </div>
+</section>

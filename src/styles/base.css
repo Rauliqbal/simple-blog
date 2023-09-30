@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poppins:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+   @apply bg-[#F2F4F7] font-poppins
+  }
+  section {
+  @apply py-20
+  }
+}
+
+@layer utilities {
+  .section-title {
+    @apply text-xl md:text-2xl font-semibold font-jetBrains text-slate-800
+  }
+}
