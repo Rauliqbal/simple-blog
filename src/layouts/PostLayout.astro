@@ -5,6 +5,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
 import '../styles/base.css'
 ---
@@ -19,7 +20,7 @@ import '../styles/base.css'
 		<meta name="generator" content={Astro.generator} />
 		<title>{frontmatter.title}</title>
 	</head>
-	<body   class="bg-white ">
+	<body class="bg-white ">
 		<Navbar/>
 		<main class="container prose prose-slate mt-16">
       <article>
@@ -27,6 +28,8 @@ import '../styles/base.css'
         <slot />
       </article>
     </main>
+		<Footer/>
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
 	</body>
 </html>
 

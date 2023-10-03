@@ -13,13 +13,13 @@ const formatDate = (date) => {
 ---
 <a href={href}>
 	<div class="bg-white rounded-2xl py-6 px-5">
-		<div class="grid grid-cols-3 gap-8">
-			<div class="col-span-2">
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+			<div class="col-span-2 order-last">
 				<span class="uppercase text-sm text-slate-400 font-semibold">{formatDate(pubDate)}</span>
 				<h4 class="mt-8 text-2xl font-semibold">{title}</h4>
 				<p class="text-base md:text-base text-slate-400 leading-relaxed tracking-wide mt-4">{description}</p>
 			</div>
-			<div>
+			<div class="order-first md:order-last col-span-2 md:col-span-1">
 				<img class="rounded-xl" class="w-2xl" src={blogImg} alt={title}>
 			</div>
 		</div>

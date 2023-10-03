@@ -1,0 +1,17 @@
+---
+const date = new Date()
+---
+
+<footer class="bg-white">
+  <div class="py-16">
+    <h3 class="text-2xl text-center bg-gradient-to-r from-[#C41740] to-[#EA9C28] bg-clip-text text-transparent font-bold">Personally Newsletter</h3>
+    <p class="text-slate-800 text-center max-w-[470px] mx-auto mt-5">A bi-weekly newsletter of design inspiration, resources and anything related to career development.</p>
+    <div class="flex items-center justify-center mt-8">
+      <input class="pl-5 py-4 border border-slate-300 rounded-l-lg outline-none" type="email" name="email" id="email" placeholder="Email address">
+      <button type="submit" class="py-[17px] px-8 bg-slate-900 text-white rounded-r-lg">Subscribe</button>
+    </div>
+  </div>
+  <div class="py-8 border border-t">
+    <p class="text-center text-slate-500">Copyright {date.getFullYear()} - <a href="https://rauliqbal.my.id">Rauliqbal</a></p>
+  </div>
+</footer>

@@ -1,9 +1,23 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Hero from '../components/homepage/Hero.astro';
+import BlogList from '../components/homepage/BlogList.astro';
 ---
 
-<Layout>
-  <main>
-    <h1>Welcome to about page</h1>
-  </main>
+<Layout title="Welcome to AstroBlog">
+	<main>
+		<section class="bg-white h-screen">
+      <div class="container text-center ">
+        <div class="inline-flex py-2 px-4 bg-[#F2F4F7] rounded-full mb-10">
+          Hi 👋, im Rauliqbal
+        </div>
+        <h1 class="lg:text-7xl lg:leading-[120%] bg-gradient-to-r from-[#C41740] to-[#EA9C28] bg-clip-text text-transparent font-bold mb-10">A passionate Front-End Developer, I studied website developer for 1+ years</h1>
+    
+        <a class="px-5 py-2  bg-slate-100 rounded-md hover:bg-slate-300 transition-all " href="https://github.com/Rauliqbal">Visit my profile</a>
+      </div>
+    </section>
+	</main>
 </Layout>
+
+
