@@ -1,7 +1,5 @@
 # Simple Blog Website
 
-Simple Blog website adalah untuk menunjukan skill,pengalaman dan karya mu
-
 ## Table of contents
 
 -  [Simple Blog Website]
